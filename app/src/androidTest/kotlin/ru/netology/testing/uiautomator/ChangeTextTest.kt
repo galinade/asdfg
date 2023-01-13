@@ -118,7 +118,7 @@ class ChangeTextTest {
 
         device.findObject(By.res(packageName, "userInput")).text = textToSet1
         device.findObject(By.res(packageName, "buttonChange")).click()
-
+        Thread.sleep(5000)
         val result = device.findObject(By.res(packageName, "textToBeChanged")).text
         assertEquals(result, textToSet2)
     }
